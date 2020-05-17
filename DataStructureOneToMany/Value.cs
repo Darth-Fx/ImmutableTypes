@@ -6,20 +6,17 @@ using System.Text;
 
 namespace DataStructureOneToMany
 {
-    public class Value
+    public class Value 
     {
-        private readonly Option<Key> key;
+        public Option<Key> Key { get; }
 
-        public Option<Key> Key
-        {
-            get => key;
-        }
+        private string valueContent { get; }
 
         public Option<Key> TryGetKey
         {
             get
             {
-                if (key != null) return key;
+                if (Key != null) return Key;
                 return None.Value;
             }
         }
@@ -31,11 +28,13 @@ namespace DataStructureOneToMany
 
         private Value(Key key)
         {
-            this.key = key;
+            this.Key = key;
         }
         private Value() 
         {
-            this.key = None.Value;   
+            this.Key = None.Value;   
         }
+
+        
     }
 }
