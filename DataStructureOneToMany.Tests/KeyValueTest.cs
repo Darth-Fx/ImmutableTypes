@@ -48,7 +48,7 @@ namespace DataStructureOneToMany.Tests
         }
 
         [TestMethod]
-        public void Given_Value_Without_Key_Should_Throw_ValueNotMappedToKeyException()
+        public void Given_Value_Without_Key_Should_Return_None_OptionType()
         {
             var valueWithoutKey = Value.Create();
             Option<Key> key = valueWithoutKey.Key;
