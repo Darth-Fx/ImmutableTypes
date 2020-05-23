@@ -10,9 +10,8 @@ namespace DataStructureOneToMany
             var k1 = Key.Create();
                 var k2 = Key.Create();
                 var equality = k1.Equals(k2);
-                Console.WriteLine("adasdasdsadsad");
                 Console.WriteLine($"Compare Keys: result={equality}");
-                //Console.ReadLine();
+                //Console.ReadLine(); -- disable for vscode debug stream
         }
 
     }
