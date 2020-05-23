@@ -1,4 +1,4 @@
-﻿using DataStructureOneToMany.Option;
+using DataStructureOneToMany.Option;
 using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -14,11 +14,7 @@ namespace DataStructureOneToMany
 
         public Option<Key> TryGetKey
         {
-            get
-            {
-                if (Key != null) return Key;
-                return None.Value;
-            }
+            get => Key;
         }
 
         public static Value Create(Key key) => new Value(key);
@@ -34,7 +30,5 @@ namespace DataStructureOneToMany
         {
             this.Key = None.Value;   
         }
-
-        
     }
 }
